@@ -168,6 +168,9 @@ color: rgb(15, 15, 15);</string>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
             </widget>
             <widget class="QLabel" name="count">
              <property name="geometry">

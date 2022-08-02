@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ChessBoard.ui'
+# Form implementation generated from reading ui file 'ui\ChessBoard.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -61,6 +61,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setStyleSheet("background-color: rgb(200, 200, 200);\n"
 "color: rgb(15, 15, 15);")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit.setReadOnly(True)
         self.lineEdit.setObjectName("lineEdit")
         self.count = QtWidgets.QLabel(self.frame)
         self.count.setGeometry(QtCore.QRect(5, 400, 150, 50))
@@ -626,13 +627,3 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(_translate("MainWindow", "White"))
         self.lineEdit_2.setText(_translate("MainWindow", "Black"))
 import PiecesImages_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
