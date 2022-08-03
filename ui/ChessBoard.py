@@ -8,15 +8,16 @@ class ChessBoard:
         import sys
         app = QtWidgets.QApplication(sys.argv)
         MainWindow = QtWidgets.QMainWindow()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(MainWindow)
+        self.__ui = Ui_MainWindow()
+        self.__ui.setupUi(MainWindow)
         self.settingButtonsAction()
         MainWindow.show()
         sys.exit(app.exec_())
-
+        
     def settingButtonsAction(self):
-        for button in self.ui.BordFrame.findChildren(QtWidgets.QPushButton):
+        for button in self.__ui.BordFrame.findChildren(QtWidgets.QPushButton):
             button.clicked.connect(lambda  state, name = button.objectName(): self.onButton(name))
             
     def onButton(self, name:str):
-        print(name)
+        button = self.__ui.BordFrame.findChild(QtWidgets.QPushButton, name)
+        print(button.objectName())
