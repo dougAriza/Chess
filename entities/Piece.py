@@ -4,6 +4,7 @@ class Piece(ABC):
         self.__position:str
         self.__count:int
         self.__selectPiece:bool
+        self.__color:str
         
     @abstractmethod
     def possibleMoves(self)->None:
@@ -22,6 +23,12 @@ class Piece(ABC):
 
     def getPosition(self)->str:
         return self.__position
+
+    def setColor(self, color:str)->None:
+        self.__color = color
+
+    def getColor(self)->str:
+        return self.__color
 
     def getCount(self)->int:
         return self.__position
