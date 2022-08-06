@@ -5,7 +5,7 @@ class Rook(Piece):
         super().__init__(color)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return "Rook"
 
     def possibleMoves(self)->None:
         pass

@@ -5,7 +5,7 @@ class Queen(Piece):
         super().__init__(color)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return "Queen"
 
     def possibleMoves(self)->None:
         pass

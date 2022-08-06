@@ -5,7 +5,7 @@ class Pawn(Piece):
         super().__init__(color)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return "Pawn"
 
     def possibleMoves(self)->None:
         pass

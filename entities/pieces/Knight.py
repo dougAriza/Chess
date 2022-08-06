@@ -5,7 +5,7 @@ class Knight(Piece):
         super().__init__(color)
 
     def __str__(self) -> str:
-        return super().__str__()
+        return "Knight"
 
     def possibleMoves(self)->None:
         pass
