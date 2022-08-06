@@ -1,10 +1,14 @@
 from abc import ABC, abstractmethod
+
+from entities.Color import Color
 class Piece(ABC):
-    def __init__(self) -> None:
-        self.__position:str
-        self.__count:int
-        self.__selectPiece:bool
-        self.__color:str
+    def __init__(self, color:Color) -> None:
+        self.__count:int = 0
+        self.__selectPiece:bool = False
+        self.__color:str = color
+
+    def __str__(self) -> str:
+        return "Piece"
         
     @abstractmethod
     def possibleMoves(self)->None:
