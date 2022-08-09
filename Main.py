@@ -7,12 +7,11 @@ from ui.ChessBoard import ChessBoard
 # chessBoard = ChessBoard()
 
 match = Match()
-boardPos = match.getBoard().getPositions()
+# print(match.getBoard())
 
-for i in range(8):
-    s=""
-    for j in range(8):
-        s += boardPos[i,j].__str__() + " "
-    print(s)
+# piece = match.getBoard().isTherePiece(0,3)
+
+print(piece)
+print(piece.getColor())
 
 

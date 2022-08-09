@@ -8,6 +8,15 @@ class Board:
         self.__positions = np.empty([8,8], dtype=Piece)
         self.__generateBoard()
 
+    def __str__(self) -> str:
+        strBoard = ""
+        for i in range(8):
+            s=""
+            for j in range(8):
+                s += self.__positions[i,j].__str__() + " "
+            strBoard += s + "\n"
+        return strBoard
+
     def __generateBoard(self)->np:
         self.__positions[0,0] = Rook.Rook(Color.BLACK)
         self.__positions[0,1] = Knight.Knight(Color.BLACK)
@@ -31,7 +40,10 @@ class Board:
         for x in range(8):
             self.__positions[6,x] = Pawn.Pawn(Color.WHITE)
 
-        
-    
+    def isTherePiece(self, row:int, column:int)->Piece:
+        row = 7 - row
+        column = 7 - column
+        return self.__positions[row,column]
+
     def getPositions(self)-> np:
         return self.__positions
