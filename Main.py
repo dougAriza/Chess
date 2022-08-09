@@ -9,9 +9,8 @@ from ui.ChessBoard import ChessBoard
 match = Match()
 # print(match.getBoard())
 
-# piece = match.getBoard().isTherePiece(0,3)
+piece = match.getBoard().isTherePiece("E1")
 
+print(match.getBoard())
 print(piece)
-print(piece.getColor())
-
-
+# print(piece.getColor())
