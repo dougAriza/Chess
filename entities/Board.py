@@ -41,8 +41,8 @@ class Board:
             self.__positions[6,x] = Pawn.Pawn(Color.WHITE)
 
     def isTherePiece(self, position:str)->Piece:
-        row = int(position[1]) - 1
-        column = 8 - (ord(position[0]) - 65)
+        row = 8 - int(position[1])
+        column = (ord(position[0]) - 65)
         return self.__positions[row,column]
 
     def getPositions(self)-> np:
