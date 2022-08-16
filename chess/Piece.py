@@ -1,11 +1,13 @@
 from abc import ABC, abstractmethod
+from turtle import position
 
-from entities.Color import Color
+from chess.Color import Color
 class Piece(ABC):
-    def __init__(self, color:Color) -> None:
+    def __init__(self, color:Color, position:list) -> None:
         self.__count:int = 0
         self.__selectPiece:bool = False
         self.__color:str = color
+        self.__position = position
 
     def __str__(self) -> str:
         return "Piece"
@@ -22,10 +24,10 @@ class Piece(ABC):
         self.__count += 1
         return destiny
 
-    def setPosition(self, position:str)->None:
+    def setPosition(self, position:list)->None:
         self.__position = position
 
-    def getPosition(self)->str:
+    def getPosition(self)->list:
         return self.__position
 
     def setColor(self, color:str)->None:

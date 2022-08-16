@@ -1,11 +1,12 @@
-from entities.Board import Board
-from entities.MatchException import MatchException
-from entities.Color import Color
+from board.Board import Board
+from chess.MatchException import MatchException
+from chess.Color import Color
 
 class Match:
-    def __init__(self) -> None:
+    def __init__(self,board:Board) -> None:
         self.__turn:int = 1
-        self.__board = Board()
+        self.__board = board
+        board.generateInitialBoard()
    
     def __incremmentTurn(self):
         self.__turn += 1
@@ -21,6 +22,6 @@ class Match:
         if (piece == None):
             raise MatchException("There isn't a piece in this position!")
         elif ((piece.getColor() == Color.BLACK) and (self.__turn % 2 != 0)):
-            raise MatchException("It is not black' turn, it's white turn now!")
+            raise MatchException("It is a white piece!")
         elif ((piece.getColor() == Color.WHITE) and (self.__turn % 2 == 0)):
-            raise MatchException("It is not white turn, it's black turn now!")
+            raise MatchException("It is a black piece!")

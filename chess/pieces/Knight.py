@@ -1,13 +1,11 @@
-from entities.Color import Color
+from chess.Color import Color
 from entities.Piece import Piece
-class King(Piece):
+class Knight(Piece):
     def __init__(self, color:Color) -> None:
         super().__init__(color)
 
     def __str__(self) -> str:
-        return "King"
+        return "Knight"
 
     def possibleMoves(self)->None:
         pass
-
-    
