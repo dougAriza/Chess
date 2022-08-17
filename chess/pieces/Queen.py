@@ -1,8 +1,9 @@
+from board.Position import Position
 from chess.Color import Color
-from entities.Piece import Piece
+from chess.Piece import Piece
 class Queen(Piece):
-    def __init__(self, color:Color) -> None:
-        super().__init__(color)
+    def __init__(self, color:Color, position:Position) -> None:
+        super().__init__(color, position)
 
     def __str__(self) -> str:
         return "Queen"
