@@ -1,5 +1,5 @@
 import numpy as np
-from .Position import Position
+from board.Position import Position
 from chess.Piece import Piece
 
 
@@ -28,3 +28,8 @@ class Board:
         chessPosition = position.convertChessPosition()
         if self.isTherePiece(chessPosition) == None:
             self.__positions[position.getRow(), position.getColumn()] = piece
+
+    def isTherePosition(self, position:Position)-> bool:
+        if (position.getRow() < 0) or (position.getRow() > 7 ) or (position.getColumn() < 0) or (position.getColumn() > 7):
+            return True
+        return False
