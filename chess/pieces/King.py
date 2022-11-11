@@ -18,7 +18,7 @@ class King(Piece):
         column = self.getPosition().getColumn()
         
         p = Position(row, column)
-        if (self.__board.isTherePiece(p.convertChessPosition()) == None) and (self.__board.isTherePosition(p)):
+        if (self.__board.isTherePiece(p.convertChessPosition()) != None) and (self.__board.isTherePosition(p) == False):
             moves[p.getRow(),p.getColumn()] = True
         
         return moves
